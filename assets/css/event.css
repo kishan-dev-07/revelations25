@@ -166,6 +166,10 @@ h1 {
 }
 
 .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     background: #fff;
     transform: rotateY(180deg);
     padding: 30px;
@@ -174,6 +178,28 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow-y: auto;
+    max-height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #39ff14 #1a1a1a;
+}
+
+.card-back::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-back::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.card-back::-webkit-scrollbar-thumb {
+    background: #39ff14;
+    border-radius: 4px;
+}
+
+.card-back::-webkit-scrollbar-thumb:hover {
+    background: #2bff00;
 }
 
 .card-back h3 {
@@ -213,6 +239,30 @@ h1 {
 .card-back button:active {
     transform: translateY(2px);
     box-shadow: 1px 1px 0 #333;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+    
+    .popup-content {
+        padding: 20px;
+    }
 }
 
 .popup {
@@ -306,28 +356,4 @@ h1 {
 .register-btn:active {
     transform: translateY(2px);
     box-shadow: 1px 1px 0 #333;
-}
-
-@media (max-width: 768px) {
-    .card {
-        width: calc(50% - 20px);
-    }
-    
-    h1 {
-        font-size: 40px;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-    }
-    
-    .popup-content {
-        padding: 20px;
-    }
 }
