@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVELATIONS - Events</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./assets/css/event.css">
+</head>
+<body>
+    <nav class="w-full h-[10vh]">
+        <div class="w-full h-[10vh] flex justify-between items-center px-4">
+            <a href="./home.html"><div class="logo w-[100px]">
+                <img class="w-full h-full " src="./assets/imgs/rvltns.png" alt="">
+            </div></a>
+            <div class="menu">
+                <ul class="flex gap-4 text-[3vh] font-[comicNeue] text-[#fff]">
+                    <li><a href="./events.html" class="text-[#39ff14] underline">Events</a></li>
+                    <li><a href="./schedule.html" class="">Schedule</a></li>
+                    <li><a href="./team.html" class="">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title-animation">Events</h1>
+    <div class="section-title">Click Your Favourite Characters to uncover exciting events!</div>
+    <div class="card-container">
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="ben10">
+                    <img src="./assets/imgs/ben10-removebg-preview.png" alt="Tech Symposium">
+                </div>
+                <div class="card-back">
+                    <h3>Tech Symposium</h3>
+                    <p>Join industry leaders and innovators for an immersive experience into the future of technology.</p>
+                    <button onclick="openPopup('popup1')">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="aladdin">
+                    <img src="./assets/imgs/aladdin-removebg-preview.png" alt="Cultural Night">
+                </div>
+                <div class="card-back">
+                    <h3>Cultural Night</h3>
+                    <p>Experience a vibrant celebration of diversity through art, music, and dance.</p>
+                    <button onclick="openPopup('popup2')">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="shinchan">
+                    <img src="./assets/imgs/shnchan-removebg-preview.png" alt="Innovation Summit">
+                </div>
+                <div class="card-back">
+                    <h3>Innovation Summit</h3>
+                    <p>Connect with thought leaders and innovators shaping the future.</p>
+                    <button onclick="openPopup('popup3')">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="bheem">
+                    <img src="./assets/imgs/chotta_bheem-removebg-preview.png" alt="Workshops">
+                </div>
+                <div class="card-back">
+                    <h3>Workshops</h3>
+                    <p>Venue: Workshop Rooms</p>
+                    <button onclick="openPopup('popup4')">Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="bean">
+                    <img src="./assets/imgs/mrbean-removebg-preview.png" alt="Competitions">
+                </div>
+                <div class="card-back">
+                    <h3>Competitions</h3>
+                    <p>Venue: Multiple Locations</p>
+                    <button onclick="openPopup('popup5')">Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="spongebob">
+                    <img src="./assets/imgs/spongebob-removebg-preview.png" alt="Panel Discussion">
+                </div>
+                <div class="card-back">
+                    <h3>Panel Discussion</h3>
+                    <p>Venue: Conference Hall</p>
+                    <button onclick="openPopup('popup6')">Know More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="mickey">
+                    <img src="./assets/imgs/mickey-removebg-preview.png" alt="Grand Finale">
+                </div>
+                <div class="card-back">
+                    <h3>Grand Finale</h3>
+                    <p>Venue: Grand Ballroom</p>
+                    <button onclick="openPopup('popup7')">Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="oggy">
+                    <img src="./assets/imgs/klipartz.com.png" alt="Grand Finale">
+                </div>
+                <div class="card-back">
+                    <h3>Grand Finale</h3>
+                    <p>Venue: Grand Ballroom</p>
+                    <button onclick="openPopup('popup7')">Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="tom">
+                    <img src="./assets/imgs/517yRBCPaGL._AC_.png" alt="Grand Finale">
+                </div>
+                <div class="card-back">
+                    <h3>Grand Finale</h3>
+                    <p>Venue: Grand Ballroom</p>
+                    <button onclick="openPopup('popup7')">Know More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Windows -->
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+            <h2>Tech Symposium</h2>
+            <p>Details about the Tech Symposium...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+            <h2>Cultural Night</h2>
+            <p>Details about Cultural Night...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
+            <h2>Innovation Summit</h2>
+            <p>Details about the Innovation Summit...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+
+    <div id="popup4" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup4')">&times;</span>
+            <h2>Workshops</h2>
+            <p>Details about the Workshops...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+
+    <div id="popup5" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup5')">&times;</span>
+            <h2>Competitions</h2>
+            <p>Details about the Competitions...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+
+    <div id="popup6" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup6')">&times;</span>
+            <h2>Panel Discussion</h2>
+            <p>Details about the Panel Discussion...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+
+    <div id="popup7" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup7')">&times;</span>
+            <h2>Grand Finale</h2>
+            <p>Details about the Grand Finale...</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+    <footer>
+        <h2 class="text-center text-[#e3e3db] font-[ComicNeue]">Webiste by <a href="https://www.linkedin.com/in/kishan-kumar-4ba257200/" target="_blank"><span class="text-[#39ff14]">Kishan Kumar</span></a> | <a href="https://www.linkedin.com/in/tushar-ghosh-315142219/" target="_blank"><span class="text-[#39ff14]">Tushar Ghosh</span></a></h2>
+        <div class='flex flex-row w-full px-2 py-1 justify-center'>
+            <div class='flex flex-row p-1 text-[12px] items-center px-2 gap-2  '>
+                <img class='bg-blend-color-burn w-[30px] h-[30px]' src="./assets/imgs/christlogo.png"  alt="" />
+                <div class="text-[#e3e3db] font-[ComicNeue]">CHRIST (Deemed to be university) Department of Computer Science (PG)</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        // Title animations
+        gsap.from(".title-animation", {
+            y: -100,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3,
+            ease: "elastic.out(1, 0.5)"
+        });
+
+        // Card flip animation
+        function toggleFlip(card) {
+            gsap.to(card.querySelector('.card-inner'), {
+                rotationY: card.classList.contains('flipped') ? 0 : 180,
+                duration: 0.6,
+                ease: "power2.inOut"
+            });
+            card.classList.toggle('flipped');
+        }
+
+        // Popup animations
+        function openPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            event.stopPropagation();
+            popup.style.display = "flex";
+            gsap.from(popup.querySelector('.popup-content'), {
+                scale: 0,
+                opacity: 0,
+                duration: 0.5,
+                ease: "back.out(1.7)"
+            });
+        }
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            gsap.to(popup.querySelector('.popup-content'), {
+                scale: 0,
+                opacity: 0,
+                duration: 0.3,
+                onComplete: () => popup.style.display = "none"
+            });
+        }
+
+        // Initial card animations
+        gsap.from('.card', {
+            scale: 0,
+            rotation: -360,
+            duration: 1,
+            stagger: 0.1,
+            ease: "back.out(1.7)",
+            delay: 0.5
+        });
+    </script>
+</body>
+</html>

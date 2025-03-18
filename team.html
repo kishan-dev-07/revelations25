@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVELATIONS - Our Team</title>
+    <link rel="stylesheet" href="./assets/css/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Our Toon Squad</h1>
+            <p>Meet the amazing team behind Revelations 2025!</p>
+        </header>
+
+        <section class="team-section">
+            <h2 class="section-title">Faculty In Charge</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="./assets/imgs/tom.png" alt="Dr Cynthia T">
+                    <h3>Dr Cynthia T</h3>
+                    <div class="role">Fest Coordinator</div>
+                    <p class="description">Leading our team with creativity and vision, ensuring every event is a masterpiece of fun and learning.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/ben10-removebg-preview.png" alt="Dr Sudhakar T">
+                    <h3>Dr Sudhakar T</h3>
+                    <div class="role">Fest Coordinator</div>
+                    <p class="description">Bringing innovation and excitement to every event, transforming ideas into unforgettable experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 class="section-title">Core Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="./assets/imgs/aladdin-removebg-preview.png" alt="Rishita Shah">
+                    <h3>Rishita Shah</h3>
+                    <div class="role">III MCA</div>
+                    <p class="description">Our creative mastermind, bringing magical ideas to life with her innovative approach.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/chotta_bheem-removebg-preview.png" alt="Aryan Mahi">
+                    <h3>Aryan Mahi</h3>
+                    <div class="role">III MCA</div>
+                    <p class="description">The powerhouse of our team, tackling challenges with strength and determination.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/klipartz.com.png" alt="Ancy Binny">
+                    <h3>Ancy Binny</h3>
+                    <div class="role">III MCA B</div>
+                    <p class="description">Our detail-oriented planner, ensuring every event runs smoothly and perfectly.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/spongebob-removebg-preview.png" alt="Shawn Thomas">
+                    <h3>Shawn Thomas</h3>
+                    <div class="role">III MCA B</div>
+                    <p class="description">Bringing enthusiasm and energy to every project, making sure fun is always on the agenda.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/mickey-removebg-preview.png" alt="Tanisha Das">
+                    <h3>Tanisha Das</h3>
+                    <div class="role">MSC AML</div>
+                    <p class="description">Our analytics expert, making data-driven decisions with a creative twist.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/tom.png" alt="Satyam J">
+                    <h3>Satyam J</h3>
+                    <div class="role">MSC AML</div>
+                    <p class="description">The strategic thinker, planning and executing events with precision and flair.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/ben10-removebg-preview.png" alt="Sharmila">
+                    <h3>Sharmila</h3>
+                    <div class="role">MSC CSA</div>
+                    <p class="description">Our communication specialist, keeping everyone connected and informed with style.</p>
+                </div>
+                <div class="team-card">
+                    <img src="./assets/imgs/aladdin-removebg-preview.png" alt="Rohan Das">
+                    <h3>Rohan Das</h3>
+                    <div class="role">MSC CSA</div>
+                    <p class="description">The technical wizard, solving problems with innovative solutions and a smile.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate team cards on scroll
+        gsap.utils.toArray('.team-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top bottom-=100',
+                    toggleActions: 'play none none reverse'
+                },
+                opacity: 0,
+                y: 50,
+                rotation: -5,
+                duration: 0.8,
+                delay: i * 0.1
+            });
+        });
+
+        // Animate section titles
+        gsap.utils.toArray('.section-title').forEach(title => {
+            gsap.from(title, {
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top bottom-=50',
+                    toggleActions: 'play none none reverse'
+                },
+                opacity: 0,
+                y: 30,
+                duration: 0.6
+            });
+        });
+
+        // Header animation
+        gsap.from('.header', {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: 'power2.out'
+        });
+    </script>
+</body>
+</html>

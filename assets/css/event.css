@@ -1,0 +1,314 @@
+@font-face {
+    font-family: Bangers;
+    src: url(../fonts/Bangers-Regular.woff2);
+}
+
+@font-face {
+    font-family: ComicNeue;
+    src: url(../fonts/ComicNeue-Bold.woff2);
+}
+
+body {
+    /* background: url("../revelations25/eventpics/Enn7s33-looney-tunes-backgrounds.jpg") no-repeat center center fixed; */
+    background-size: cover;
+    margin: 0;
+    padding: 0 20px;
+    min-height: 100vh;
+    font-family: ComicNeue;
+    background: black;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: Bangers;
+    font-size: 60px;
+    text-align: center;
+    color: #10dc35;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-family: ComicNeue;
+    text-align: center;
+    font-size: 2rem;
+    margin: 40px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #000;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #ff6b6b;
+    margin: 15px auto;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card {
+    width: calc(33.33% - 30px);
+    min-width: 280px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.card:hover .card-inner:not(.flipped) {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    border: 5px solid #333;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        0 6px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.card-front::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.2) 10px,
+        rgba(255, 255, 255, 0.2) 20px
+    );
+    mix-blend-mode: overlay;
+}
+
+.card-front[data-bg="ben10"] { background: linear-gradient(135deg, #19c85a, #14a048); }
+.card-front[data-bg="aladdin"] { background: linear-gradient(135deg, #fd1d1d, #fcdb45); }
+.card-front[data-bg="shinchan"] { background: linear-gradient(135deg, #009afc, #00f3ff); }
+.card-front[data-bg="bheem"] { background: linear-gradient(135deg, #fdff00, #faf002); }
+.card-front[data-bg="bean"] { background: linear-gradient(135deg, #523103, #6b2108); }
+.card-front[data-bg="spongebob"] { background: linear-gradient(135deg, #29c4ff, #45fcb0); }
+.card-front[data-bg="oggy"] { background: linear-gradient(135deg, #f24308, #ff6b6b); }
+.card-front[data-bg="tom"] { background: linear-gradient(135deg, #fdff00, #faf002); }
+.card-front[data-bg="mickey"] { background: linear-gradient(135deg, #0062ff, #00a6ff); }
+
+.card img {
+    width: 80%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-back {
+    background: #fff;
+    transform: rotateY(180deg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-back h3 {
+    font-family: Bangers;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-back p {
+    font-family: ComicNeue;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-back button {
+    font-family: ComicNeue;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 #333;
+    border: 2px solid #333;
+}
+
+.card-back button:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0 #333;
+}
+
+.card-back button:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 #333;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    border: 5px solid #333;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+    font-family: Bangers;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.popup-content p {
+    font-family: ComicNeue;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    box-shadow: 2px 2px 0 #333;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 0 #333;
+}
+
+.register-btn {
+    font-family: ComicNeue;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    border: 3px solid #333;
+    box-shadow: 3px 3px 0 #333;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0 #333;
+}
+
+.register-btn:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 #333;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+    
+    .popup-content {
+        padding: 20px;
+    }
+}

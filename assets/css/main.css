@@ -1,0 +1,340 @@
+@font-face {
+    font-family: comicNeue;
+    src: url(../fonts/ComicNeue-Bold.woff2);
+}
+
+@font-face {
+    font-family: bangers;
+    src: url(../fonts/Bangers-Regular.woff2);
+}
+
+/* offwhite - #e3e3db */
+/* green - #39ff14 */
+/* bg - #121212 */
+
+
+/* Loader CSS */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.count-wrapper {
+  position: relative;
+  width: 180px;
+  height: 360px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  will-change: transform;
+}
+
+.count {
+  position: relative;
+  width: 1080px;
+  height: 360px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(-1080px);
+  will-change: transform;
+}
+
+.digit {
+  position: relative;
+  width: 180px;
+  height: 360px;
+}
+
+.digit h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  font-size: 360px;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+.revealer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Page 2 CSS */
+
+.page2 h1 {
+    font-size: 3.5vw;
+    font-family: comicNeue;
+    text-align: center;
+    color: #434b34;
+    line-height: 1.2;
+}
+
+
+/* Page 3 CSS */
+
+.page3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .page3 section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .sticky {
+    display: flex;
+  }
+  
+  .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .services {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    transform: translateY(0px);
+    background-color: #39ff14;
+    z-index: -1;
+  }
+  
+  .service {
+    width: max-content;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service p {
+    text-transform: uppercase;
+    font-family: bangers;
+    letter-spacing: 2px;
+    /* font-size: 60px; */
+    font-size: 5vh;
+    font-weight: 600;
+    color: #e3e3db;
+    transition: color 0.3s;
+  }
+  
+  .service.active p {
+    color: #121212;
+  }
+  
+  .service-img-wrapper {
+    position: relative;
+    width: 60%;
+    height: 250px;
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 90% 100%, 50% 100%, 0 100%, 0 0);
+  }
+  
+  .service-img {
+    width: 100%;
+    height: 2000px;
+    transform: translateY(0px);
+    will-change: transform;
+  }
+  
+  .img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .service-copy {
+    width: 60%;
+  }
+  
+  .line {
+    position: relative;
+    will-change: transform;
+  }
+  
+  .service-copy p {
+    font-family: comicNeue;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #e3e3db;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5px;
+    height: 60%;
+    background-color: #121212;
+  }
+  
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #39ff14;
+    transform-origin: top;
+    transform: scaleY(0);
+    will-change: transform;
+  }
+  
+  .index {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    padding: 4px 2px 2px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #000; */
+    color: #fff;
+  }
+  
+  .index span {
+    font-family: "PP NeueBit";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 12px;
+    width: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .index span.separator {
+    position: relative;
+    top: -1px;
+    width: 20px;
+    height: 2px;
+    background-color: #39ff14;
+  }
+  
+  @media (max-width: 900px) {
+    .sticky {
+      flex-direction: column;
+    }
+  
+    .col:nth-child(1) {
+      padding-top: 25%;
+      justify-content: flex-start;
+    }
+  
+    .col:nth-child(2) {
+      flex-direction: row;
+      gap: 1.5em;
+    }
+  
+    .service-img-wrapper {
+      width: 25%;
+    }
+  
+    .service-copy p {
+      font-size: 14px;
+    }
+  
+    .progress-bar {
+      top: -15%;
+      height: 50%;
+      transform: rotate(-90deg);
+    }
+  
+    .index {
+      top: 5%;
+      bottom: unset;
+    }
+  }
+  
+  /* Page 4 CSS */
+
+  .neon-button {
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #39ff14;
+    font-weight: bold;
+    font-size: 2.125rem;
+    border: 2px solid #39ff14;
+    border-radius: 9999px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .neon-button:hover {
+    background-color: #39ff14;
+    color: #111827;
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button-text {
+    min-width: 320px;
+    font-family: bangers;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  .zap-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .glow-effect {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #39ff14;
+    opacity: 0.2;
+    filter: blur(1rem);
+    transition: opacity 0.3s;
+  }
+  
+  .neon-button:hover .glow-effect::before {
+    opacity: 0.4;
+  }

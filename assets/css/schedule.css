@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url('../fonts/Bangers-Regular.woff2');
+}
+
+@font-face {
+    font-family: 'ComicNeue';
+    src: url('../fonts/ComicNeue-Bold.woff2');
+}
+
+body {
+    margin: 0;
+    padding: 0 20px;
+    min-height: 100vh;
+    font-family: 'ComicNeue';
+    background-color: #121212;
+    /* background: url("../revelations25/eventpics/Enn7s33-looney-tunes-backgrounds.jpg") no-repeat center center fixed; */
+    background-size: cover;
+    /* color: #333; */
+    position: relative;
+}
+
+/* body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 0;
+} */
+
+.schedule-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.genie {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 80px;
+    left: 5rem;
+    z-index: 10;
+    pointer-events: none;
+    filter: brightness(1.1) contrast(1.1);
+    animation: floatGenie 6s ease-in-out infinite;
+}
+
+@keyframes floatGenie {
+    0% { transform: translateY(0px) rotate(-5deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(-5deg); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(-1deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(-1deg); }
+}
+
+.main-title {
+    position: relative;
+    z-index: 1;
+    font-family: 'Bangers';
+    font-size: 60px;
+    text-align: center;
+    color: #13e528;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.schedule-block {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: #000000;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 4px solid #ffffff;
+    transform: rotate(-1deg);
+    animation: float 6s ease-in-out infinite;
+}
+
+.schedule-block:nth-child(2) {
+    animation-delay: -2s;
+    transform: rotate(1deg);
+}
+
+.schedule-block:nth-child(3) {
+    animation-delay: -4s;
+    transform: rotate(-0.5deg);
+}
+
+.schedule-block:hover {
+    transform: rotate(0) scale(1.02);
+}
+
+.date {
+    font-family: 'Bangers';
+    font-size: 2.5em;
+    text-align: center;
+    color: #13e528;
+    margin-bottom: 30px;
+  
+    letter-spacing: 2px;
+    
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    background: #000000;
+    border-radius: 15px;
+    padding: 15px;
+    color: #333;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    border: 3px solid #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+}
+
+.event-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.event-header h3 {
+    font-family: 'Bangers';
+    font-size: 1.5em;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 3px;
+    
+}
+
+.round {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 2px solid #333;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.time, .venue {
+    font-family: 'ComicNeue';
+    font-size: 1.1em;
+    color: #e3e3db;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .schedule-block {
+        min-width: 100%;
+    }
+    
+    .schedule-container h1 {
+        font-size: 40px;
+    }
+    
+    .date {
+        font-size: 2em;
+    }
+}

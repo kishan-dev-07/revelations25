@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Toons</title>
+    <link rel="stylesheet" href="toons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Revelations</h1>
+                <p>Scroll down to explore our events</p>
+            </div>
+        </header>
+
+        <div class="parallax-container">
+            <section id="section1" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/tom.png" alt="Tech Symposium">
+                    </div>
+                    <div class="event-details1">
+                        <h2>Tech Symposium</h2>
+                        <p>Join Tom & Jerry in a wild chase through cutting-edge tech! Experience innovative solutions and breakthrough technologies in this action-packed symposium.</p>
+                        <button class="know-more-btn" onclick="openPopup('popup1')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section2" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/ben10-removebg-preview.png" alt="Cultural Night">
+                    </div>
+                    <div class="event-details2">
+                        <h2>Cultural Night</h2>
+                        <p>That's all folks! Join Bugs Bunny and the Looney Tunes gang for a night of spectacular performances and cultural celebrations!</p>
+                        <button class="know-more-btn" onclick="openPopup('popup2')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section3" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/aladdin-removebg-preview.png" alt="Innovation Summit">
+                    </div>
+                    <div class="event-details3">
+                        <h2>Innovation Summit</h2>
+                        <p>Strong to the finish 'cause we eat our spinach! Power up your ideas with Popeye at our innovation-packed summit!</p>
+                        <button class="know-more-btn" onclick="openPopup('popup3')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section4" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/chotta_bheem-removebg-preview.png" alt="Workshops">
+                    </div>
+                    <div class="event-details4">
+                        <h2>Workshops</h2>
+                        <p>Zoinks! Join Scooby and the gang to solve mysteries of technology through hands-on workshops and interactive sessions!</p>
+                        <button class="know-more-btn" onclick="openPopup('popup4')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section5" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/klipartz.com.png" alt="Competitions">
+                    </div>
+                    <div class="event-details5">
+                        <h2>Competitions</h2>
+                        <p>Think Pink! Join the Pink Panther in a series of stealthy competitions that will test your skills and creativity!</p>
+                        <button class="know-more-btn" onclick="openPopup('popup5')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section6" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/spongebob-removebg-preview.png" alt="Panel Discussion">
+                    </div>
+                    <div class="event-details6">
+                        <h2>Panel Discussion</h2>
+                        <p>Yabba Dabba Doo! Rock your way through insightful discussions with the modern stone-age family!</p>
+                        <button class="know-more-btn" onclick="openPopup('popup6')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section7" class="section">
+                <div class="content">
+                    <div class="image-container">
+                        <img src="eventpics/mickey-removebg-preview.png" alt="Grand Finale">
+                    </div>
+                    <div class="event-details7">
+                        <h2>Grand Finale</h2>
+                        <p>Oh boy! Join Mickey and friends for a magical celebration of achievements and excellence!</p>
+                        <button class="know-more-btn" onclick="openPopup('popup7')">Know More</button>
+                    </div>
+                </div>
+            </section>
+            <div class="scroll-container"></div>
+        </div>
+
+        <!-- Popup Windows -->
+        <div id="popup1" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+                <h2>Tech Symposium</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 15, 2024</p>
+                    <p><strong>Time:</strong> 9:00 AM - 6:00 PM</p>
+                    <p><strong>Venue:</strong> Toon Tech Center</p>
+                    <p><strong>Registration Fee:</strong> ₹500</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Keynote speeches from industry leaders</li>
+                        <li>Interactive tech demonstrations</li>
+                        <li>Networking opportunities</li>
+                        <li>Innovation showcase</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup2" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+                <h2>Cultural Night</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 16, 2024</p>
+                    <p><strong>Time:</strong> 7:00 PM - 10:00 PM</p>
+                    <p><strong>Venue:</strong> Toon Town Theater</p>
+                    <p><strong>Registration Fee:</strong> ₹300</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Cartoon-themed performances</li>
+                        <li>Animation workshops</li>
+                        <li>Character meet & greets</li>
+                        <li>Interactive shows</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup3" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
+                <h2>Innovation Summit</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 17, 2024</p>
+                    <p><strong>Time:</strong> 10:00 AM - 5:00 PM</p>
+                    <p><strong>Venue:</strong> Animation Innovation Hub</p>
+                    <p><strong>Registration Fee:</strong> ₹400</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Animation technology workshops</li>
+                        <li>Character design sessions</li>
+                        <li>Storytelling masterclass</li>
+                        <li>Industry networking</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup4" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup4')">&times;</span>
+                <h2>Workshops</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 18, 2024</p>
+                    <p><strong>Time:</strong> 11:00 AM - 4:00 PM</p>
+                    <p><strong>Venue:</strong> Mystery Machine Lab</p>
+                    <p><strong>Registration Fee:</strong> ₹350</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Animation basics</li>
+                        <li>Voice acting workshop</li>
+                        <li>Storyboard creation</li>
+                        <li>Character development</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup5" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup5')">&times;</span>
+                <h2>Competitions</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 19, 2024</p>
+                    <p><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
+                    <p><strong>Venue:</strong> Pink Palace Arena</p>
+                    <p><strong>Registration Fee:</strong> ₹300</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Animation contest</li>
+                        <li>Character design challenge</li>
+                        <li>Voice acting competition</li>
+                        <li>Storyboard showdown</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup6" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup6')">&times;</span>
+                <h2>Panel Discussion</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 20, 2024</p>
+                    <p><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+                    <p><strong>Venue:</strong> Bedrock Convention Center</p>
+                    <p><strong>Registration Fee:</strong> ₹250</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Industry expert talks</li>
+                        <li>Animation trends discussion</li>
+                        <li>Future of cartoons panel</li>
+                        <li>Q&A session</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup7" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('popup7')">&times;</span>
+                <h2>Grand Finale</h2>
+                <div class="popup-details">
+                    <p><strong>Date:</strong> October 21, 2024</p>
+                    <p><strong>Time:</strong> 6:00 PM - 10:00 PM</p>
+                    <p><strong>Venue:</strong> Magic Kingdom Hall</p>
+                    <p><strong>Registration Fee:</strong> ₹600</p>
+                    <h3>Event Highlights:</h3>
+                    <ul>
+                        <li>Awards ceremony</li>
+                        <li>Special performances</li>
+                        <li>Animation showcase</li>
+                        <li>Closing celebration</li>
+                    </ul>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate sections on scroll
+        const sections = gsap.utils.toArray(".section");
+        sections.forEach((section, i) => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: 1,
+                    pin: true,
+                    pinSpacing: false,
+                    snap: 1 / (sections.length - 1),
+                }
+            });
+
+            // Only animate out the sections that aren't the last one
+            if (i !== sections.length - 1) {
+                tl.to(section, {
+                    autoAlpha: 0,
+                    ease: "none"
+                });
+            }
+        });
+
+        // Add bounce animation to content on hover
+        gsap.utils.toArray(".content").forEach(content => {
+            content.addEventListener("mouseenter", () => {
+                gsap.to(content, {
+                    scale: 1.02,
+                    rotation: 1,
+                    duration: 0.3
+                });
+            });
+            content.addEventListener("mouseleave", () => {
+                gsap.to(content, {
+                    scale: 1,
+                    rotation: -1,
+                    duration: 0.3
+                });
+            });
+        });
+
+        // Popup functionality
+        function openPopup(popupId) {
+            document.getElementById(popupId).style.display = "block";
+            gsap.from(`#${popupId} .popup-content`, {
+                scale: 0.5,
+                opacity: 0,
+                duration: 0.5
+            });
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = "none";
+        }
+
+        // Close popup when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('popup')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'ComicNeue';
+    src: url(../fonts/ComicNeue-Bold.woff2);
+}
+
+@font-face {
+    font-family: bangers;
+    src: url(../fonts/Bangers-Regular.woff2);
+}
+
+/* offwhite - #e3e3db */
+/* green - #39ff14 */
+/* bg - #121212 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    font-family: 'ComicNeue', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #121212;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(45deg, #ffd54f, #ffeb3b);
+    border-radius: 30px;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.1) 20px
+    );
+    animation: pattern-move 20s linear infinite;
+}
+
+@keyframes pattern-move {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.header h1 {
+    font-size: 4rem;
+    color: #39ff14;
+    font-family: bangers;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 0 #121212;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.header p {
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+}
+
+.team-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #39ff14;
+    text-transform: uppercase;
+    font-family: bangers;
+    letter-spacing: 2px;
+    /* text-shadow: 2px 2px 0 #fff; */
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #333;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-card {
+    background: #121212;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid #fff;
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.1) 20px
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover {
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.team-card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.team-card .role {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.team-card .description {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        transform: none;
+    }
+
+    .team-card:hover {
+        transform: scale(1.02);
+    }
+}
