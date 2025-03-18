@@ -91,7 +91,7 @@ const legaciesAnimation = () => {
         gsap.ticker.lagSmoothing(0);
       
         const stickySection = document.querySelector(".sticky");
-        const stickyHeight = window.innerHeight * 6;
+        const stickyHeight = window.innerHeight * 7;
         const services = document.querySelectorAll(".service");
         const indicator = document.querySelector(".indicator");
         const currentCount = document.querySelector("#current-count");

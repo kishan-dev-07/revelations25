@@ -1,5 +1,8 @@
 export const servicesCopy = [
   [
+    "Theme for “Revelations 2024” is “Marvel Universe”. The students were divided into seven leagues – ironman, captain america, thor, black widow, scarlet witch, spiderman and dr. strange . In and around every event, there were about 300+ students competing against each other.",
+  ],
+  [
     "“Revelations 2023” is an Intra-departmental fest that is organized by the Department of Computer Science for the Post graduate students every year. The objective of this event is to provide a platform for the students to show case their talents in technical as well as non-technical events.",
   ],
   [
