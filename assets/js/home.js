@@ -67,6 +67,11 @@ const heroAnimation = () => {
     document.addEventListener("DOMContentLoaded", () => {
 
         const container = document.querySelector(".trail-container");
+        const heroDescription = document.querySelector(".hero-description");
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            heroDescription.innerHTML = "( Click on screen around and see the magic unfold )";
+        }
 
         const config = {
             imageCount: 13,
