@@ -47,8 +47,8 @@ body {
     position: absolute;
     width: 350px;
     height: auto;
-    top: 80px;
-    left: 5rem;
+    top: 7.5rem;
+    left: 6rem;
     z-index: 10;
     pointer-events: none;
     filter: brightness(1.1) contrast(1.1);
