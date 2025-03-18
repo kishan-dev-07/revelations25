@@ -18,6 +18,25 @@ body {
     background: black;
 }
 
+.img1{
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+.img4{
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: 150px;
+}
+
+.img7{
+    height: 150px;
+}
+
+.img11{
+    height: 180px;
+    padding: 0%;
+}
 .page-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -134,7 +153,7 @@ h1 {
 .card-front[data-bg="mickey"] { background: linear-gradient(135deg, #0062ff, #00a6ff); }
 
 .card img {
-    width: 80%;
+    width: 100%;
     height: auto;
     max-height: 80%;
     object-fit: contain;

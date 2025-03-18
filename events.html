@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./assets/css/event.css">
 </head>
+
 <body>
     <nav class="w-full h-[10vh]">
         <div class="w-full h-[10vh] flex justify-between items-center px-4">
-            <a href="./home.html"><div class="logo w-[100px]">
-                <img class="w-full h-full " src="./assets/imgs/rvltns.png" alt="">
-            </div></a>
+            <a href="./home.html">
+                <div class="logo w-[100px]">
+                    <img class="w-full h-full " src="./assets/imgs/rvltns.png" alt="">
+                </div>
+            </a>
             <div class="menu">
                 <ul class="flex gap-4 text-[3vh] font-[comicNeue] text-[#fff]">
                     <li><a href="./events.html" class="text-[#39ff14] underline">Events</a></li>
@@ -28,11 +32,12 @@
         <div class="card" onclick="toggleFlip(this)">
             <div class="card-inner">
                 <div class="card-front" data-bg="ben10">
-                    <img src="./assets/imgs/ben10-removebg-preview.png" alt="Tech Symposium">
+                    <img src="./assets/imgs/Mojo_jojo_aparincia2.png" alt="Tech Symposium" class="img1">
                 </div>
                 <div class="card-back">
-                    <h3>Tech Symposium</h3>
-                    <p>Join industry leaders and innovators for an immersive experience into the future of technology.</p>
+                    <h3>Pop Quiz (Mojo Jojo’s Mind Mash)</h3>
+                    <p>Test your cartoon knowledge in this brain-bending quiz competition featuring classic and modern
+                        animation trivia.</p>
                     <button onclick="openPopup('popup1')">Read More</button>
                 </div>
             </div>
@@ -43,8 +48,8 @@
                     <img src="./assets/imgs/aladdin-removebg-preview.png" alt="Cultural Night">
                 </div>
                 <div class="card-back">
-                    <h3>Cultural Night</h3>
-                    <p>Experience a vibrant celebration of diversity through art, music, and dance.</p>
+                    <h3>Charades: "Mystery Machine Mimes"</h3>
+                    <p>Unleash your inner sleuth by guessing cartoon characters and scenes without speaking a word.</p>
                     <button onclick="openPopup('popup2')">Read More</button>
                 </div>
             </div>
@@ -55,8 +60,9 @@
                     <img src="./assets/imgs/shnchan-removebg-preview.png" alt="Innovation Summit">
                 </div>
                 <div class="card-back">
-                    <h3>Innovation Summit</h3>
-                    <p>Connect with thought leaders and innovators shaping the future.</p>
+                    <h3>Videography: "Cartoon Network Studios"</h3>
+                    <p>Create short videos inspired by your favorite cartoons and showcase your filming and editing
+                        skills.</p>
                     <button onclick="openPopup('popup3')">Read More</button>
                 </div>
             </div>
@@ -67,24 +73,24 @@
         <div class="card" onclick="toggleFlip(this)">
             <div class="card-inner">
                 <div class="card-front" data-bg="bheem">
-                    <img src="./assets/imgs/chotta_bheem-removebg-preview.png" alt="Workshops">
+                    <img src="./assets/imgs/bugs2.png" alt="Workshops" class="img4">
                 </div>
                 <div class="card-back">
-                    <h3>Workshops</h3>
-                    <p>Venue: Workshop Rooms</p>
-                    <button onclick="openPopup('popup4')">Know More</button>
+                    <h3>Sports: "Looney Tunes Olympics"</h3>
+                    <p>Compete in wacky sports challenges inspired by classic cartoon antics and obstacle courses.</p>
+                    <button onclick="openPopup('popup4')">Read More</button>
                 </div>
             </div>
         </div>
         <div class="card" onclick="toggleFlip(this)">
             <div class="card-inner">
                 <div class="card-front" data-bg="bean">
-                    <img src="./assets/imgs/mrbean-removebg-preview.png" alt="Competitions">
+                    <img src="./assets/imgs/dexter.png" alt="Competitions">
                 </div>
                 <div class="card-back">
-                    <h3>Competitions</h3>
-                    <p>Venue: Multiple Locations</p>
-                    <button onclick="openPopup('popup5')">Know More</button>
+                    <h3>IT Manager: "Dexter’s Laboratory Challenge"</h3>
+                    <p>Put your IT management skills to the test by solving tech problems worthy of Dexter’s genius.</p>
+                    <button onclick="openPopup('popup5')">Read More</button>
                 </div>
             </div>
         </div>
@@ -94,9 +100,9 @@
                     <img src="./assets/imgs/spongebob-removebg-preview.png" alt="Panel Discussion">
                 </div>
                 <div class="card-back">
-                    <h3>Panel Discussion</h3>
-                    <p>Venue: Conference Hall</p>
-                    <button onclick="openPopup('popup6')">Know More</button>
+                    <h3>IT Quiz: "Brain Blast Trivia"</h3>
+                    <p>Challenge your tech knowledge in this high-energy quiz covering all things programming and technology.</p>
+                    <button onclick="openPopup('popup6')">Read More</button>
                 </div>
             </div>
         </div>
@@ -106,25 +112,25 @@
         <div class="card" onclick="toggleFlip(this)">
             <div class="card-inner">
                 <div class="card-front" data-bg="mickey">
-                    <img src="./assets/imgs/mickey-removebg-preview.png" alt="Grand Finale">
+                    <img src="./assets/imgs/power2.png" alt="Grand Finale" class="img7">
                 </div>
                 <div class="card-back">
-                    <h3>Grand Finale</h3>
-                    <p>Venue: Grand Ballroom</p>
-                    <button onclick="openPopup('popup7')">Know More</button>
-                </div>
+                    <h3>UI/UX: "Powerpuff Design Challenge"</h3>
+                    <p>Create sleek and functional user interfaces with the perfect blend of sugar, spice, and everything nice.</p>
+                    <button onclick="openPopup('popup7')">Read More</button>
+                </div>           
             </div>
         </div>
         <div class="card" onclick="toggleFlip(this)">
             <div class="card-inner">
                 <div class="card-front" data-bg="oggy">
-                    <img src="./assets/imgs/klipartz.com.png" alt="Grand Finale">
+                    <img src="./assets/imgs/Genie5.webp" alt="Grand Finale">
                 </div>
                 <div class="card-back">
-                    <h3>Grand Finale</h3>
-                    <p>Venue: Grand Ballroom</p>
-                    <button onclick="openPopup('popup7')">Know More</button>
-                </div>
+                    <h3>Prompt Engineering: "Genie’s Three Wishes"</h3>
+                    <p>Craft powerful prompts to get the most out of AI tools and unlock unexpected outcomes.</p>
+                    <button onclick="openPopup('popup8')">Read More</button>
+                </div>  
             </div>
         </div>
         <div class="card" onclick="toggleFlip(this)">
@@ -133,10 +139,36 @@
                     <img src="./assets/imgs/517yRBCPaGL._AC_.png" alt="Grand Finale">
                 </div>
                 <div class="card-back">
-                    <h3>Grand Finale</h3>
-                    <p>Venue: Grand Ballroom</p>
-                    <button onclick="openPopup('popup7')">Know More</button>
+                    <h3>CTF: "Tom & Jerry’s Capture the Flag"</h3>
+                    <p>Engage in a thrilling cybersecurity game of cat-and-mouse, defending and capturing flags.</p>
+                    <button onclick="openPopup('popup9')">Read More</button>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="mickey">
+                    <img src="./assets/imgs/mickey-removebg-preview.png" alt="Grand Finale">
                 </div>
+                <div class="card-back">
+                    <h3>Coding-Debugging: "Bug Hunters Anonymous"</h3>
+                    <p>Hunt down and eliminate tricky bugs in code snippets with speed and precision.</p>
+                    <button onclick="openPopup('popup10')">Read More</button>
+                </div>                          
+            </div>
+        </div>
+        <div class="card" onclick="toggleFlip(this)">
+            <div class="card-inner">
+                <div class="card-front" data-bg="oggy">
+                    <img src="./assets/imgs/billy.png" alt="Grand Finale" class="img7">
+                </div>
+                <div class="card-back">
+                    <h3>Tank of War: "Billy & Mandy’s Battle Bash"</h3>
+                    <p>Build your own bot and compete in a battle of strategy and efficiency.</p>
+                    <button onclick="openPopup('popup11')">Read More</button>
+                </div>                                
             </div>
         </div>
     </div>
@@ -145,71 +177,174 @@
     <div id="popup1" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
-            <h2>Tech Symposium</h2>
-            <p>Details about the Tech Symposium...</p>
+            <h2>Pop Quiz (Mojo Jojo’s Mind Mash)</h2>
+            <p>Put your cartoon knowledge to the ultimate test in this brain-bending quiz competition! From classic Hanna-Barbera to modern favorites, challenge your memory of character catchphrases, show plots, and animation trivia. Professor Mojo Jojo has designed fiendishly clever questions to confound even the most dedicated cartoon aficionados.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Kezya (AIML) - 7825931777</p>
+            <p><strong>Location:</strong> MCA LAB – 811</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 18 (3 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
+    
 
     <div id="popup2" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
-            <h2>Cultural Night</h2>
-            <p>Details about Cultural Night...</p>
+            <h2>Charades: "Mystery Machine Mimes"</h2>
+            <p>Unleash your inner sleuth and act out cartoon characters and scenes without speaking a word. Channel your inner Scooby-Doo and solve the mystery of pantomime!</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Riya Joji (AIML) - 9309496969</p>
+            <p><strong>Location:</strong> 815</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 6 (1 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
+    
 
     <div id="popup3" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
-            <h2>Innovation Summit</h2>
-            <p>Details about the Innovation Summit...</p>
+            <h2>Videography: "Cartoon Network Studios"</h2>
+            <p>Create short videos inspired by your favorite cartoons! Showcase your filming and editing skills while bringing animated concepts to life in the real world.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Jeswin Joison (MCA) - 7902672064</p>
+            <p><strong>Location:</strong> 815 for briefing</p>
+            <p><strong>Duration:</strong> 24 Hours</p>
+            <p><strong>Participants:</strong> 6 (1 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
-
+    
     <div id="popup4" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup4')">&times;</span>
-            <h2>Workshops</h2>
-            <p>Details about the Workshops...</p>
+            <h2>Sports: "Looney Tunes Olympics"</h2>
+            <p>Compete in wacky sports challenges inspired by classic cartoon antics! From ACME obstacle courses to Road Runner races, these aren't your average athletic events.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Jesvin (AIML), Akhil (MCA A) - 9746530806, 8777861147</p>
+            <p><strong>Location:</strong> Dharmaram Ground</p>
+            <p><strong>Duration:</strong> Will vary</p>
+            <p><strong>Participants:</strong> 6 Teams per event (1 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
+    
 
     <div id="popup5" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup5')">&times;</span>
-            <h2>Competitions</h2>
-            <p>Details about the Competitions...</p>
+            <h2>IT Manager: "Dexter’s Laboratory Challenge"</h2>
+            <p>Put your IT management skills to the test by solving tech problems worthy of Dexter’s genius! Manage resources, troubleshoot issues, and optimize systems.</p>
+            <p><strong>Type:</strong> Individual</p>
+            <p><strong>Contact:</strong> Anirban (MCA B) - 7908940076</p>
+            <p><strong>Location:</strong> 815</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 12 (2 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
+    
 
     <div id="popup6" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup6')">&times;</span>
-            <h2>Panel Discussion</h2>
-            <p>Details about the Panel Discussion...</p>
+            <h2>IT Quiz: "Brain Blast Trivia"</h2>
+            <p>Channel your inner Jimmy Neutron in this high-energy quiz testing your knowledge of all things tech and programming. Think fast and answer faster!</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Mansi (AIML) - 8262871660</p>
+            <p><strong>Location:</strong> 815</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 12 (2 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
+    
 
     <div id="popup7" class="popup">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup7')">&times;</span>
-            <h2>Grand Finale</h2>
-            <p>Details about the Grand Finale...</p>
+            <h2>UI/UX: "Powerpuff Design Challenge"</h2>
+            <p>Create user interfaces with the perfect blend of sugar, spice, and everything nice! Design intuitive, beautiful, and functional UIs that would make Professor Utonium proud.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Rohan Cherian Jacob (MCA B) - 6282292458</p>
+            <p><strong>Location:</strong> MCA LAB – 811</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 6 (1 from each group)</p>
             <button class="register-btn">Register Now</button>
         </div>
     </div>
+    <div id="popup8" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup8')">&times;</span>
+            <h2>Prompt Engineering: "Genie’s Three Wishes"</h2>
+            <p>Craft the perfect prompts to get exactly what you want from AI tools! Like Aladdin’s Genie, learn to phrase your wishes carefully to avoid unexpected outcomes.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Varun (AIML) - 971501427485</p>
+            <p><strong>Location:</strong> 815</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 6 (1 from each group)</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+    
+    <div id="popup9" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup9')">&times;</span>
+            <h2>CTF: "Tom & Jerry’s Capture the Flag"</h2>
+            <p>A classic cat-and-mouse game of cybersecurity! Hunt for flags while defending your own in this thrilling competition of wits and technical skills.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Fokul S, Josaiah Murafel Dkhar (MCA A) - 9446535503, 7085584359</p>
+            <p><strong>Location:</strong> MCA LAB – 811</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 6 (1 from each group)</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+    
+    <div id="popup10" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup10')">&times;</span>
+            <h2>Coding-Debugging: "Bug Hunters Anonymous"</h2>
+            <p>Channel your inner Elmer Fudd as you track down and eliminate those "wascally" bugs in various code snippets. Be vewy, vewy quiet—you’re hunting bugs!</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Parichoy (MCA A) - 6295810943</p>
+            <p><strong>Location:</strong> MCA LAB – 811</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 6 (1 from each group)</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+    
+    <div id="popup11" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup11')">&times;</span>
+            <h2>Tank of War: "Billy & Mandy’s Battle Bash"</h2>
+            <p>Build your own bot to go to battle! The most efficient bot wins.</p>
+            <p><strong>Type:</strong> Team</p>
+            <p><strong>Contact:</strong> Shrey (MCA B) - 9810923699</p>
+            <p><strong>Location:</strong> MCA LAB – 811</p>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Participants:</strong> 12 (2 from each group)</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+    </div>
+    
+                    
+    
     <footer>
-        <h2 class="text-center text-[#e3e3db] font-[ComicNeue]">Webiste by <a href="https://www.linkedin.com/in/kishan-kumar-4ba257200/" target="_blank"><span class="text-[#39ff14]">Kishan Kumar</span></a> | <a href="https://www.linkedin.com/in/tushar-ghosh-315142219/" target="_blank"><span class="text-[#39ff14]">Tushar Ghosh</span></a></h2>
+        <h2 class="text-center text-[#e3e3db] font-[ComicNeue]">Webiste by <a
+                href="https://www.linkedin.com/in/kishan-kumar-4ba257200/" target="_blank"><span
+                    class="text-[#39ff14]">Kishan Kumar</span></a> | <a
+                href="https://www.linkedin.com/in/tushar-ghosh-315142219/" target="_blank"><span
+                    class="text-[#39ff14]">Tushar Ghosh</span></a></h2>
         <div class='flex flex-row w-full px-2 py-1 justify-center'>
             <div class='flex flex-row p-1 text-[12px] items-center px-2 gap-2  '>
-                <img class='bg-blend-color-burn w-[30px] h-[30px]' src="./assets/imgs/christlogo.png"  alt="" />
-                <div class="text-[#e3e3db] font-[ComicNeue]">CHRIST (Deemed to be university) Department of Computer Science (PG)</div>
+                <img class='bg-blend-color-burn w-[30px] h-[30px]' src="./assets/imgs/christlogo.png" alt="" />
+                <div class="text-[#e3e3db] font-[ComicNeue]">CHRIST (Deemed to be university) Department of Computer
+                    Science (PG)</div>
             </div>
         </div>
     </footer>
@@ -270,4 +405,5 @@
         });
     </script>
 </body>
+
 </html>
