@@ -373,8 +373,9 @@
 
         // Popup animations
         function openPopup(popupId) {
-            const popup = document.getElementById(popupId);
+            event.preventDefault();
             event.stopPropagation();
+            const popup = document.getElementById(popupId);
             popup.style.display = "flex";
             gsap.from(popup.querySelector('.popup-content'), {
                 scale: 0,
@@ -385,12 +386,16 @@
         }
 
         function closePopup(popupId) {
+            event.preventDefault();
             const popup = document.getElementById(popupId);
             gsap.to(popup.querySelector('.popup-content'), {
                 scale: 0,
                 opacity: 0,
                 duration: 0.3,
-                onComplete: () => popup.style.display = "none"
+                onComplete: () => {
+                    popup.style.display = "none";
+                    gsap.set(popup.querySelector('.popup-content'), { clearProps: "all" });
+                }
             });
         }
 
@@ -400,8 +405,18 @@
             rotation: -360,
             duration: 1,
             stagger: 0.1,
-            ease: "back.out(1.7)",
-            delay: 0.5
+            ease: "back.out(1.7)"
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(event) {
+            const popups = document.querySelectorAll('.popup');
+            popups.forEach(popup => {
+                if (event.target === popup) {
+                    const popupId = popup.id;
+                    closePopup(popupId);
+                }
+            });
         });
     </script>
 </body>
