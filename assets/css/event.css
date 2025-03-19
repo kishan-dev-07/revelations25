@@ -12,10 +12,10 @@ body {
     /* background: url("../revelations25/eventpics/Enn7s33-looney-tunes-backgrounds.jpg") no-repeat center center fixed; */
     background-size: cover;
     margin: 0;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     min-height: 100vh;
     font-family: ComicNeue;
-    background: black;
+    background: #121212;
 }
 
 .img1{

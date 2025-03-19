@@ -54,7 +54,7 @@
 /* Page 2 CSS */
 
 .page2 h1 {
-    font-size: 3.4vw;
+    font-size: 3.3vw;
     font-family: comicNeue;
     text-align: center;
     color: #434b34;
@@ -347,7 +347,7 @@
 }
 
 .index p {
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
   text-transform: uppercase;
   font-size: 0.95rem;
 }
@@ -415,4 +415,20 @@
 
 .c-scrollbar_thumb {
   display: none;
+}
+
+.menu a.active {
+  color: #39ff14;
+  position: relative;
+}
+
+.menu a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #39ff14;
+  box-shadow: 0 0 10px #39ff14;
 }

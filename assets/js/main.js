@@ -1,4 +1,11 @@
 let locoScroll;
+const splineViewer = document.querySelector('spline-viewer');
+const imgCont = document.querySelector('.spline-container img');
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    splineViewer.style.display = 'none';
+} else {
+  imgCont.style.display = 'none';
+}
 
 function locomotive(){
     gsap.registerPlugin(ScrollTrigger);

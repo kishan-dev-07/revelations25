@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     min-height: 100vh;
     font-family: 'ComicNeue';
     background-color: #121212;
