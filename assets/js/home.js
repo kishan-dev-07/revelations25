@@ -67,6 +67,11 @@ const heroAnimation = () => {
     document.addEventListener("DOMContentLoaded", () => {
 
         const container = document.querySelector(".trail-container");
+        const heroDescription = document.querySelector(".hero-description");
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            heroDescription.innerHTML = "( Click on screen around and see the magic unfold )";
+        }
 
         const config = {
             imageCount: 13,
@@ -271,7 +276,194 @@ const heroAnimation = () => {
     });
 }
 
+
+const buttonAnimation = () => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('.neon-button');
+        const buttonText = document.querySelector('.button-text');
+        let hasAnimated = false;
+        
+        // Create GSAP timelines
+        const buttonTimeline = gsap.timeline({ paused: true });
+        const textTimeline = gsap.timeline({ paused: true });
+        
+        buttonTimeline
+          .to(button, {
+            scale: 0.95,
+            duration: 0.1
+          })
+          .to(button, {
+            boxShadow: '0 0 30px #39ff14',
+            duration: 0.2
+          });
+        
+        textTimeline
+          .to(buttonText, {
+            opacity: 0,
+            y: -20,
+            duration: 0.2,
+            onComplete: () => {
+              buttonText.textContent = 'Events';
+            }
+          })
+          .to(buttonText, {
+            opacity: 1,
+            y: 0,
+            duration: 0.2
+          });
+        
+        // Add event listeners
+        button.addEventListener('mouseenter', () => {
+          buttonTimeline.play();
+          if (!hasAnimated) {
+            textTimeline.play();
+            hasAnimated = true;
+          }
+        });
+        
+        button.addEventListener('mouseleave', () => {
+          buttonTimeline.reverse();
+        });
+      });
+}
+
+const stackAnimation = () => {
+
+    const pinnedSection = document.querySelector(".pinned");
+    const stickyHeader = document.querySelector(".sticky-header");
+    const cards = document.querySelectorAll(".card");
+    const progressBarContainer = document.querySelector(".progress-bar");
+    const progressBar = document.querySelector(".progress");
+    const indicesContainer = document.querySelector(".indices");
+    const indices = document.querySelectorAll(".index");
+    const cardCount = cards.length;
+    const pinnedHeight = window.innerHeight * (cardCount + 1);
+    const startRotations = [0, 5, 0, -5];
+    const endRotations = [-10, -5, 10, 5];
+    const progressColors = ["#A5D6A7", "#FFCC80", "#FFF59D", "#90CAF9", "#EF9A9A", "#BCAAA4"];
+
+    cards.forEach((card, index) => {
+        gsap.set(card, { rotation: startRotations[index] });
+    });
+
+    let isProgressBarVisible = false;
+    let currentActiveIndex = -1;
+
+    function animateIndexOpacity(newIndex) {
+        if (newIndex !== currentActiveIndex) {
+            indices.forEach((index, i) => {
+                gsap.to(index, {
+                    opacity: i === newIndex ? 1 : 0.25,
+                    duration: 0.5,
+                    ease: "power2.out",
+                });
+            });
+            currentActiveIndex = newIndex;
+        }
+    }
+
+    function showProgressAndIndices() {
+        gsap.to([progressBarContainer, indicesContainer], {
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.out",
+        });
+        isProgressBarVisible = true;
+    }
+
+    function hideProgressAndIndices() {
+        gsap.to([progressBarContainer, indicesContainer], {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+        });
+        isProgressBarVisible = false;
+        animateIndexOpacity(-1);
+    }
+
+    ScrollTrigger.create({
+        trigger: pinnedSection,
+        scroller: ".main",
+        start: "top top",
+        end: `+=${pinnedHeight}`,
+        pin: true,
+        pinSpacing: true,
+        onLeave: () => {
+            hideProgressAndIndices();
+        },
+        onEnterBack: () => {
+            showProgressAndIndices();
+        },
+        onUpdate: (self) => {
+            const progress = self.progress * (cardCount + 1);
+            const currentCard = Math.floor(progress);
+
+            if (progress <= 1) {
+                gsap.to(stickyHeader, {
+                    opacity: 1 - progress,
+                    duration: 0.1,
+                    ease: "none",
+                });
+            } else {
+                gsap.set(stickyHeader, { opacity: 0 });
+            }
+
+            if (progress > 1 && !isProgressBarVisible) {
+                showProgressAndIndices();
+            } else if (progress <= 1 && isProgressBarVisible) {
+                hideProgressAndIndices();
+            }
+
+            let progressHeight = 0;
+            let colorIndex = -1;
+            if (progress > 1) {
+                progressHeight = ((progress - 1) / cardCount) * 100;
+                colorIndex = Math.min(Math.floor(progress - 1), cardCount - 1);
+            }
+
+            gsap.to(progressBar, {
+                height: `${progressHeight}%`,
+                backgroundColor: progressColors[colorIndex],
+                duration: 0.3,
+                ease: "power1.out",
+            });
+
+            if (isProgressBarVisible) {
+                animateIndexOpacity(colorIndex);
+            }
+
+            cards.forEach((card, index) => {
+                if (index < currentCard) {
+                    gsap.set(card, {
+                        top: "50%",
+                        rotation: endRotations[index],
+                    });
+                } else if (index === currentCard) {
+                    const cardProgress = progress - currentCard;
+                    const newTop = gsap.utils.interpolate(150, 50, cardProgress);
+                    const newRotation = gsap.utils.interpolate(
+                        startRotations[index],
+                        endRotations[index],
+                        cardProgress
+                    );
+                    gsap.set(card, {
+                        top: `${newTop}%`,
+                        rotation: newRotation,
+                    });
+                } else {
+                    gsap.set(card, {
+                        top: "150%",
+                        rotation: startRotations[index],
+                    });
+                }
+            });
+        },
+    });
+}
+
 locomotive();
 textSplitter();
 gsapAnimation();
 heroAnimation();
+buttonAnimation();
+stackAnimation();

@@ -6,6 +6,14 @@
     <title>REVELATIONS</title>
     <link rel="stylesheet" href="./assets/css/home.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 
 </head>
@@ -17,7 +25,7 @@
                     <img class="w-full h-full " src="./assets/imgs/rvltns.png" alt="">
                 </div></a>
                 <div class="menu">
-                    <ul class="flex gap-4 text-[3vh] font-[comicNeue] text-[#fff]">
+                    <ul class="flex gap-4 text-[4vw] sm:text-[3vh] font-[comicNeue] text-[#fff]">
                         <li><a href="./events.html" class="">Events</a></li>
                         <li><a href="./schedule.html" class="">Schedule</a></li>
                         <li><a href="./team.html" class="">Our Team</a></li>
@@ -28,8 +36,8 @@
         <section class="hero w-full h-[90vh] relative">
             <div class="section1 trail-container">
                 <div class="w-[100%] h-[100%] flex flex-col justify-center items-center gap-2">
-                    <h2 class="z-[1] uppercase font-[bangers] text-[18vh] text-[#39ff14] tracking-[2px]">Revelations<span class="text-[6vh]">'25</span></h2>
-                    <p class="z-[1] text-[#39ff14] text-[2.5vh]">( Move your cursor around and see the magic unfold )</p>
+                    <h2 class="z-[1] uppercase font-[bangers] text-[17vw] sm:text-[18vh] text-[#39ff14] tracking-[2px] pointer-events-none">Revelations<span class="text-[5vw] sm:text-[6vh]">'25</span></h2>
+                    <p class="z-[1] text-[#39ff14] text-[3vw] sm:text-[2.5vh] pointer-events-none hero-description">( Move your cursor around and see the magic unfold )</p>
                 </div>
             </div>
         </section>
@@ -51,7 +59,104 @@
             <h1>made to compete against each other on the final day, that is the</h1>
             <h1>13th of April.</h1>
         </section>
-        <section class="page3 w-full min-h-screen"></section>
+        <section class="page3 w-full min-h-screen">
+            <section class="pinned">
+                <div class="sticky-header">
+                  <h1>LEAGUES</h1>
+                </div>
+          
+                <div class="progress-bar">
+                  <div class="progress"></div>
+                </div>
+          
+                <div class="indices">
+                  <div class="index" id="index-1">
+                    <p><ion-icon name="bulb-sharp"></ion-icon></p>
+                    <!-- <p>May 15th</p> -->
+                    <p>Ben 10</p>
+                  </div>
+                  <div class="index" id="index-2">
+                    <p><ion-icon name="rocket-sharp"></ion-icon></p>
+                    <!-- <p>July 1st</p> -->
+                    <p>Chhota Bheem</p>
+                  </div>
+                  <div class="index" id="index-3">
+                    <p><ion-icon name="extension-puzzle-sharp"></ion-icon></p>
+                    <!-- <p>August 20th</p> -->
+                    <p>Spongebob</p>
+                  </div>
+                  <div class="index" id="index-4">
+                    <p><ion-icon name="trending-up-sharp"></ion-icon></p>
+                    <!-- <p>October 5th</p> -->
+                    <p>Aladdin</p>
+                  </div>
+                  <div class="index" id="index-5">
+                    <p><ion-icon name="rocket-sharp"></ion-icon></p>
+                    <!-- <p>October 5th</p> -->
+                    <p>Shinchan</p>
+                  </div>
+                  <div class="index" id="index-6">
+                    <p><ion-icon name="bulb-sharp"></ion-icon></p>
+                    <!-- <p>October 5th</p> -->
+                    <p>Mr. Bean</p>
+                  </div>
+                </div>
+          
+                <div class="card" id="card-1">
+                  <div class="card-phase"><p>Character #01</p></div>
+                  <div class="card-title">
+                    <!-- <p>From May 15th</p> -->
+                    <h1>Ben <span>10</span></h1>
+                  </div>
+                </div>
+                <div class="card" id="card-2">
+                  <div class="card-phase"><p>Character #02</p></div>
+                  <div class="card-title">
+                    <!-- <p>From July 1st</p> -->
+                    <h1>Chhota <span>Bheem</span></h1>
+                  </div>
+                </div>
+                <div class="card" id="card-3">
+                  <div class="card-phase"><p>Character #03</p></div>
+                  <div class="card-title">
+                    <!-- <p>From August 20th</p> -->
+                    <h1>Spongebob<span></span></h1>
+                  </div>
+                </div>
+                <div class="card" id="card-4">
+                  <div class="card-phase"><p>Character #04</p></div>
+                  <div class="card-title">
+                    <!-- <p>From October 5th</p> -->
+                    <h1>Aladdin<span></span></h1>
+                  </div>
+                </div>
+                <div class="card" id="card-5">
+                  <div class="card-phase"><p>Character #05</p></div>
+                  <div class="card-title">
+                    <!-- <p>From October 5th</p> -->
+                    <h1>Shinchan<span></span></h1>
+                  </div>
+                </div>
+                <div class="card" id="card-6">
+                  <div class="card-phase"><p>Character #06</p></div>
+                  <div class="card-title">
+                    <!-- <p>From October 5th</p> -->
+                    <h1>Mr. <span>Bean</span></h1>
+                  </div>
+                </div>
+            </section>
+        </section>
+        <section class="page4 w-full min-h-[50vh] flex flex-col items-center justify-center">
+            <a href="./events.html"><button class="neon-button">
+                <div class="button-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="zap-icon">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <span class="button-text">Check out</span>
+                </div>
+                <div class="glow-effect"></div>
+            </button></a>
+        </section>
         <footer>
             <h1 class="text-center text-[#e3e3db] font-[comicNeue]">Website by <a href="https://www.linkedin.com/in/kishan-kumar-4ba257200/" target="_blank"><span class="text-[#39ff14]">Kishan Kumar</span></a> | <a href="https://www.linkedin.com/in/tushar-ghosh-315142219/" target="_blank"><span class="text-[#39ff14]">Tushar Ghosh</span></a></h1>
             <div class='flex flex-row w-full px-2 py-1 justify-center'>
