@@ -279,16 +279,34 @@ h1 {
 }
 
 .popup-content {
+    position: relative;
     background: #fff;
-    padding: 40px;
-    border-radius: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
     width: 90%;
-    max-width: 600px;
     max-height: 80vh;
     overflow-y: auto;
-    position: relative;
-    border: 5px solid #333;
-    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    scrollbar-color: #39ff14 #1a1a1a;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #39ff14;
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: #2bff00;
 }
 
 .popup-content h2 {
