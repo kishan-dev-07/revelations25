@@ -177,6 +177,41 @@ body {
     }
 }
 
+/* Gallery Grid Styles */
+.gallery-grid {
+    margin-bottom: 2rem;
+}
+
+.gallery-grid > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-grid > div > :last-child {
+    grid-column: 2;
+}
+
+@media (max-width: 1024px) {
+    .gallery-grid > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-grid > div > :last-child {
+        grid-column: 1 / span 2;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-grid > div {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid > div > :last-child {
+        grid-column: 1;
+    }
+}
+
 /* Animation Classes */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
