@@ -34,13 +34,37 @@ body {
 .schedule-container {
     position: relative;
     z-index: 1;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-content: center;
     padding: 20px;
+    
+}
+
+@media (max-width: 1200px) {
+    .schedule-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-container {
+        grid-template-columns: 1fr;
+    }
+    .schedule-block {
+        min-width: auto;
+    }
+    .main-title {
+        font-size: 40px;
+    }
+    .genie {
+        width: 200px;
+        top: 5rem;
+        left: 2rem;
+    }
 }
 
 .genie {
@@ -79,9 +103,7 @@ body {
 }
 
 .schedule-block {
-    flex: 1;
     min-width: 300px;
-    max-width: 400px;
     background: #000000;
     border-radius: 20px;
     padding: 20px;
@@ -89,6 +111,7 @@ body {
     border: 4px solid #ffffff;
     transform: rotate(-1deg);
     animation: float 6s ease-in-out infinite;
+    height: fit-content;
 }
 
 .schedule-block:nth-child(2) {
@@ -99,6 +122,16 @@ body {
 .schedule-block:nth-child(3) {
     animation-delay: -4s;
     transform: rotate(-0.5deg);
+}
+
+.schedule-block:nth-child(4) {
+    animation-delay: -3s;
+    transform: rotate(0.8deg);
+}
+
+.schedule-block:nth-child(5) {
+    animation-delay: -5s;
+    transform: rotate(-0.7deg);
 }
 
 .schedule-block:hover {
@@ -197,19 +230,6 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .schedule-block {
-        min-width: 100%;
-    }
-    
-    .schedule-container h1 {
-        font-size: 40px;
-    }
-    
-    .date {
-        font-size: 2em;
-    }
-}
 
 .menu a.active {
     color: #39ff14;
