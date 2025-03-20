@@ -208,6 +208,7 @@ h1 {
     color: #333;
     margin-bottom: 15px;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    padding-top: 3rem;
 }
 
 .card-back p {
