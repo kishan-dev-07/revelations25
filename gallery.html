@@ -142,117 +142,8 @@
         </header>
 
         <section class="gallery-grid w-full px-4 py-8">
-            <div class="grid gap-6">
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/inauga.JPG" alt="Revelations Event 1" loading="lazy">
-                        <div class="caption">
-                            <h3>Opening Ceremony</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/charades.JPG" alt="Revelations Event 2" loading="lazy">
-                        <div class="caption">
-                            <h3>Charades</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/coddindebug.JPG" alt="Revelations Event 3" loading="lazy">
-                        <div class="caption">
-                            <h3>Coding/Debugging</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/football.JPG" alt="Revelations Event 4" loading="lazy">
-                        <div class="caption">
-                            <h3>Sports</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/it1.JPG" alt="Revelations Event 5" loading="lazy">
-                        <div class="caption">
-                            <h3>IT Manager</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/itquiz.JPG" alt="Revelations Event 6" loading="lazy">
-                        <div class="caption">
-                            <h3>IT Quiz</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/prompt.JPG" alt="Revelations Event 7" loading="lazy">
-                        <div class="caption">
-                            <h3>Prompt Engineering</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/popquiz.JPG" alt="Revelations Event 8" loading="lazy">
-                        <div class="caption">
-                            <h3>Pop Quiz</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame">
-                        <img src="./assets/imgs/gallery/uiux.JPG" alt="Revelations Event 9" loading="lazy">
-                        <div class="caption">
-                            <h3>UI/UX</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame ">
-                        <img src="./assets/imgs/gallery/weebwars.JPG" alt="Revelations Event 10" loading="lazy">
-                        <div class="caption">
-                            <h3>Weeb Wars</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="item-frame ">
-                        <img src="./assets/imgs/gallery/valedictory.JPG" alt="Revelations Event 10" loading="lazy">
-                        <div class="caption">
-                            <h3>Award Ceremony</h3>
-                            <p>Revelations '24</p>
-                        </div>
-                        <div class="hover-effect"></div>
-                    </div>
-                </div>
+            <div class="grid gap-6" id="gallery-container">
+                <!-- Gallery items will be dynamically inserted here -->
             </div>
         </section>
 
@@ -306,9 +197,11 @@
                 
                 setTimeout(() => {
                     let galleryHTML = '';
-                    galleryData[year].forEach(item => {
-                        galleryHTML += createGalleryItem(item);
-                    });
+                    if (galleryData && galleryData[year]) {
+                        galleryData[year].forEach(item => {
+                            galleryHTML += createGalleryItem(item);
+                        });
+                    }
                     galleryContainer.innerHTML = galleryHTML;
                     
                     setTimeout(() => {
