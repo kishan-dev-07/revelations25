@@ -104,7 +104,7 @@ const galleryData = {
         },
         {
             "image": "./assets/imgs/gallery/2025/website.JPG",
-            "title": "Website",
+            "title": "Website Demonstration",
             "description": "Revelations '25"
         }
     ]
