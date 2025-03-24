@@ -274,7 +274,6 @@ body {
 .modal-content {
     position: relative;
     max-width: 90%;
-    max-height: 90vh;
     margin: auto;
     display: flex;
     flex-direction: column;
